@@ -264,6 +264,9 @@ import CoreGraphics
         //        if touchInside {
         // Modify hue at constant brightness
         let locationInView = touch.locationInView(self)
+        var locationInViewX = max(locationInView.x, 0)
+        locationInViewX = min(locationInViewX, frame.width)
+        NSLog("%f", locationInViewX)
         
         // Calculate based on orientation
 //        if orientation == .Vertical {
@@ -291,7 +294,7 @@ import CoreGraphics
         //			}
         //        }
         
-        let xPct = locationInView.x / frame.width
+        let xPct = locationInViewX / frame.width
         if (xPct <= 0.5){
             //modifying saturation
             let sat = (xPct * 2) * (originalSaturation - minimumSaturation) + minimumSaturation
