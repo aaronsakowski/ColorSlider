@@ -306,7 +306,7 @@ import CoreGraphics
             brightness = brt
             saturation = originalSaturation
         }
-        NSLog("Saturation: %f, Brightness: %f, Hue: %f", saturation, brightness, hue)
+//        NSLog("Saturation: %f, Brightness: %f, Hue: %f", saturation, brightness, hue)
     }
     
     /// Draws necessary parts of the `ColorSlider`.
