@@ -114,7 +114,7 @@ import CoreGraphics
         }
     }
     
-    @IBInspectable var baseColor = UIColor(hue: 1.0, saturation: 0.7, brightness: 1.0, alpha: 1.0) {
+    @IBInspectable public var baseColor = UIColor(hue: 1.0, saturation: 0.7, brightness: 1.0, alpha: 1.0) {
         didSet {
             setUpBaseColor()
         }
