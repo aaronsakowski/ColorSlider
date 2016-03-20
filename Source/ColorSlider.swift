@@ -266,7 +266,6 @@ import CoreGraphics
         let locationInView = touch.locationInView(self)
         var locationInViewX = max(locationInView.x, 0)
         locationInViewX = min(locationInViewX, frame.width)
-        NSLog("%f", locationInViewX)
         
         // Calculate based on orientation
 //        if orientation == .Vertical {
