@@ -114,7 +114,7 @@ import CoreGraphics
         }
     }
     
-    @IBInspectable public var baseColor = UIColor(hue: 1.0, saturation: 0.7, brightness: 1.0, alpha: 1.0) {
+    @IBInspectable public var baseColor = UIColor(red: 59/255.0, green: 123/255.0, blue: 218/255.0, alpha: 1) {
         didSet {
             setUpBaseColor()
         }
@@ -302,10 +302,11 @@ import CoreGraphics
         }
         else{
             //modifying saturation
-            let brt = 1 - ((xPct - 0.5) * 2) * (originalBrightness - minimumBrightness)
+            let brt = (((1 - xPct) * 2) * (originalBrightness - minimumBrightness) + minimumBrightness)
             brightness = brt
             saturation = originalSaturation
         }
+        NSLog("Saturation: %f, Brightness: %f, Hue: %f", saturation, brightness, hue)
     }
     
     /// Draws necessary parts of the `ColorSlider`.
